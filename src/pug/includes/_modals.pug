@@ -1,0 +1,52 @@
+#modal-login.modal
+	.modal-content
+		.row
+			.col.s12
+				h4 Вход
+		.row
+			form.col.s12.js-validate
+				.row
+					.input-field.col.s12
+						input#loginName(type='text',data-validation='length',data-validation-length='min6')
+						label(for='loginName') Имя пользователя
+				.row
+					.input-field.col.s12
+						input#loginPass(type='password',data-validation='length',data-validation-length='min6')
+						label(for='loginPass') Пароль
+				.row
+					.col.s12
+						button(type='submit').btn.waves-effect.waves-dark Войти
+		.row.row-footer
+			.col.s12
+				h5 Не зарегестрированы?
+			.col.s12
+				a(href="#modal-register").modal-action.modal-close.btn.waves-effect.waves-dark.modal-trigger Регистрация
+#modal-register.modal
+	.modal-content
+		.row
+			.col.s12
+				h4 Регистрация
+		.row
+			form.col.s12.js-validate
+				.row
+					.input-field.col.s12
+						input#RegisterName(type='text',data-validation='length',data-validation-length='min6')
+						label(for='RegisterName') Имя пользователя
+				.row
+					.input-field.col.s12
+						input#RegisterCode(type='password',data-validation='length',data-validation-length='min6')
+						label(for='RegisterCode') Номер зачетной книжки
+				.row
+					.input-field.col.s12
+						input#RegisterPass(type='password',data-validation='length',data-validation-length='min6')
+						label(for='RegisterPass') Пароль
+				.row
+					.col.s12
+						button(type='submit').modal-action.btn.modal-close.waves-effect.waves-dark Зарегестрироваться
+	// $('#modal-success').modal('open');
+#modal-success.modal
+	.modal-content
+		.row
+			.col.s12
+				h4 Регистрация успешна
+				p Воспользуйтесь своими данными для входа

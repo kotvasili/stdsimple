@@ -1,0 +1,220 @@
+input[type='number']
+	-moz-appearance: textfield
+
+input[type='submit']
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	font-family: $o
+
+input::-webkit-clear-button,
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	-webkit-appearance: none
+
+input[type="password"]
+	font: small-caption
+	line-height: 1.65
+
+input
+	box-shadow: none
+	font-family: $o
+	color: #000
+	font-size: 16px
+	+placeholder
+		font-family: $o
+	&::-ms-clear
+		display: none
+
+svg
+	display: inline-block
+	max-width: 100%
+	max-height: 100%
+
+button
+	background: 0 0
+
+*
+	+box
+	-webkit-tap-highlight-color: transparent
+	+placeholder
+		font-family: $o
+		font-size: 16px
+
+textarea
+	resize: none
+	font-family: 'Roboto'
+	font-size: 16px
+	+placeholder
+		font-family: $o
+		font-size: 14px
+
+ul
+	li > a
+		display: inline-block
+		width: 100%
+
+html
+	font-size: 16px
+	line-height: 1
+	position: relative
+	+box
+	width: 100%
+	height: auto
+	overflow: auto
+
+		
+body
+	background-attachment: fixed
+	+box
+	+font-smoothing
+	text-rendering: optimizeLegibility
+	font-family: $o
+	min-width: 320px
+	min-height: 100vh
+	-webkit-overflow-scrolling: touch
+	position: relative
+	overflow-x: hidden
+nav 
+	padding-left: 40px
+	padding-right: 40px
+	+r(600)
+		padding-left: 20px
+		padding-right: 20px
+	.btn
+		color: #000
+		margin: 0
+	.brand-logo
+		+r(992)
+			position: static
+			transform: none
+.modal
+	width: 100% !important
+	max-width: 600px
+	max-height: 85%
+	h5
+	.modal-footer
+		text-align: left
+		padding-bottom: 30px
+		margin-bottom: 0
+.container
+	margin-top: 30px
+.content-text
+	p 
+		display: block
+		
+	ul 
+		display: block
+		
+		li 
+			padding-bottom: 5px
+			margin-left: 20px
+			list-style-type: disc
+	.btn 
+		display: inline-block
+		margin-right: 20px
+
+.profile-card
+	width: 120px !important
+	height: 120px
+	padding: 10px
+	text-align: center
+	white-space: nowrap
+	i 
+		margin-top: 10px
+
+	&-text 
+		padding-left: 20px !important
+		padding-right: 0 !important
+		+r(750)
+			padding-left: 0 !important
+			p 
+				white-space: nowrap
+		// +r(850)
+		// 	padding-left: 0 !important
+		p 
+			font-size: 16px
+			font-weight: 400
+
+p
+	&.bold
+		font-size: 20px
+		font-weight: 500
+.profile-dogovor
+	&-status
+		+rm(601)
+			padding-left: 20px
+		max-width: 500px
+		+r(600)
+			margin-right: -10px
+		.profile-dogovor-status-container-icon,.profile-dogovor-status-container-text
+			p,i 
+				color: #ff5722
+				&.medium
+					font-size: 50px
+		+r(600)
+			i 
+				font-size: 35px !important
+
+		&-container
+			&.success
+				.profile-dogovor-status-container-text
+					margin-top: 5px
+				.profile-dogovor-status-container-icon,.profile-dogovor-status-container-text
+					p,i 
+						color: #00c853 
+			&.wait
+				.profile-dogovor-status-container-text
+					margin-top: 5px
+				.profile-dogovor-status-container-icon,.profile-dogovor-status-container-text
+					p,i 
+						color: #ffd600 
+			&-icon 
+				width: 75px !important
+				+r(600)
+					width: 55px !important
+			&-text 
+				text-align: left
+				p 
+					font-weight: 500
+					+r(600)
+						margin-top: 1px 
+				
+.student-form-wrapp
+	padding-bottom: 50px
+	&>.row
+		max-width: 700px
+		width: 100%
+	.student-form-title
+		max-width: 900px
+		text-align: center
+		margin: 0 auto
+	.step-title
+		padding: 1.5rem 2.75rem 1.5rem 4rem !important
+		font-size: 18px
+	ul.stepper
+		.step:before
+			top: 1.1rem;
+
+ul.stepper .step.active:before, ul.stepper .step.done:before
+	background-color: #26a69a
+	// font-family: $o
+.help-block.form-error
+	color: red
+	font-weight: 500
+.student-table
+	padding-top: 20px
+	padding-bottom: 50px
+	.student-table-inner
+		margin-top: 40px
+		&>.row
+			text-align: right
+			margin-top: 20px
+			.btn 
+				margin-right: 0
+.main-container
+	+r(400)
+		&>.row 
+			&>.s6:last-child
+				width: 100%
+				padding-left: 0

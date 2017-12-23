@@ -1,0 +1,150 @@
+extends _layout
+block title
+	title Страница студента
+block config
+	- var main = true
+block content
+	.container.main-container
+		.row
+			.col.s6
+				.profile-card-wrapper.row
+					.profile-card.z-depth-2.col.s4
+						i.large.material-icons account_circle
+					.profile-card-text.col.s8
+						p.bold Солодарь В.А
+						p Номер зачетки: 566532-10
+						p Группа: 482472
+			.col.s6
+				.profile-dogovor-status
+					p.bold Статус договора:
+					// по умолчанию договор не получен у студента
+					.profile-dogovor-status-container.row.success
+						.profile-dogovor-status-container-icon.col.s4
+							i.medium.material-icons assignment_turned_in
+						.profile-dogovor-status-container-text.col.s8
+							p Договор заключен
+					.profile-dogovor-status-container.row.wait
+						.profile-dogovor-status-container-icon.col.s4
+							i.medium.material-icons assignment
+						.profile-dogovor-status-container-text.col.s8
+							p Договор на подписании
+					.profile-dogovor-status-container.row
+						.profile-dogovor-status-container-icon.col.s4
+							i.medium.material-icons assignment_late
+						.profile-dogovor-status-container-text.col.s8
+							p Ваш договор не получен. Отправьте договор в ближайшее время
+		.student-form-wrapp
+			.student-form-title
+				h4 Заполните данные, необходимые для прохождения практики
+			.row
+				.col.s12
+					form.js-validate
+						ul.stepper.linear
+							li.step.active
+								.step-title.waves-effect Город проживания
+								.step-content
+									.row
+										.input-field.col.s12
+											input#PersonCity(name='PersonCity', type='text', data-validation="length custom",data-validation-regexp="^[-А-ЯЁа-яё ]+$", data-validation-length='min2',data-validation-error-msg='Обязательное поле, только кирилица',placeholder='Минск')
+											label(for='PersonCity') Город
+									.step-actions
+										button(type='button').waves-effect.waves-dark.btn.next-step Далее
+							li.step
+								.step-title.waves-effect Телефон
+								.step-content
+									.row
+										.input-field.col.s12
+											input#PersonTel(name='PersonTel', type='tel', required='',data-validation="custom",data-validation-regexp="^[-0-9()+ ]+$",data-validation-error-msg='Обязательное поле')
+											label(for='PersonTel') Телефон
+									.step-actions
+										button(type='button').waves-effect.waves-dark.btn-flat.previous-step Назад
+										button(type='button').waves-effect.waves-dark.btn.next-step Далее
+							//- li.step
+							//- 	.step-title.waves-effect E-mail
+							//- 	.step-content
+							//- 		.row
+							//- 			.input-field.col.s12
+							//- 				input#PersonEmail(name='PersonEmail', type='email', required='',data-validation='email',data-validation-error-msg='Некорректный E-mail',placeholder='example@gmail.com')
+							//- 				label(for='PersonEmail') E-mail
+							//- 		.step-actions
+							//- 			button(type='button').waves-effect.waves-dark.btn-flat.previous-step Назад
+							//- 			button(type='button').waves-effect.waves-dark.btn.next-step Далее
+							li.step
+								.step-title.waves-effect Полное (юридическое) название предприятия
+								.step-content
+									.row
+										.input-field.col.s12
+											input#PersonPlace(name='PersonPlace', type='text', required='',data-validation='length', data-validation-length='min3',data-validation-error-msg='Обязательное поле',placeholder='OAO "МАЗ"')
+											label(for='PersonPlace') Название предприятия
+									.step-actions
+										button(type='button').waves-effect.waves-dark.btn-flat.previous-step Назад
+										button(type='button').waves-effect.waves-dark.btn.next-step Далее
+
+							li.step
+								.step-title.waves-effect ФИО руководителя
+								.step-content
+									.row
+										.input-field.col.s12
+											input#PersonNachalnik(name='PersonNachalnik', type='text', required='',data-validation="length custom",data-validation-regexp="^[-А-ЯЁа-яё ]+$", data-validation-length='min5',data-validation-error-msg='Введите полные имя, фамилию и отчество',placeholder='Назаренко Игорь Михайлович')
+											label(for='PersonNachalnik') ФИО руководителя
+									.step-actions
+										button(type='button').waves-effect.waves-dark.btn-flat.previous-step Назад
+										button(type='button').waves-effect.waves-dark.btn.next-step Далее
+							li.step
+								.step-title.waves-effect Должность руководителя от предприятия
+								.step-content
+									.row
+										.input-field.col.s12
+											input#PersonNachalnikDolj(name='PersonNachalnikDolj', type='text', required='',data-validation="length custom",data-validation-regexp="^[-А-ЯЁа-яё'' ]+$",, data-validation-length='min3',data-validation-error-msg='Обязателньое поле',placeholder='Начальник отдела кадров')
+											label(for='PersonNachalnikDolj') Должность руководителя
+									.step-actions
+										button(type='button').waves-effect.waves-dark.btn-flat.previous-step Назад
+										button(type='button').waves-effect.waves-dark.btn.next-step Далее
+							li.step
+								.step-title.waves-effect Отправка данных
+								.step-content
+									.row
+										.col.s12
+											h5 Отпрвить данные
+									.step-actions
+										button(type='button').waves-effect.waves-dark.btn-flat.previous-step Назад
+										button.btn.waves-effect.waves-dark.btn(type='submit') Отправить
+		.student-table
+			.row
+				.col.s12
+					.student-form-title
+						h4 Вы успешно заполнили данные
+						p Также вам необходимо выслать договор, статус его подписания отображается вверху страницы
+					
+					.student-table-inner
+						table.highlight.responsive-table
+							thead
+								tr
+									th Город проживания
+									th Телефон
+									th Название предприятия
+									th ФИО руководителя
+									th Должность
+							tbody
+								tr
+									td Зябки, Минская обл
+									td +375259469724
+									td ООО "Невысокие технологии"
+									td Карулесевич В.А
+									td Начальник Начальника Зама по работе с кадрами под кадрами
+						.row
+							.col.m6.offset-m6
+								button(type='button').waves-effect.waves-dark.btn Редактировать данные
+
+
+
+
+
+
+
+
+
+
+
+
+	

@@ -1,0 +1,35 @@
+mixin icon(name)
+	svg(class="icon")
+		use(xlink:href="#" + name+"" xmlns:xlink="http://www.w3.org/1999/xlink")
+	//- include includes/_mixins.pug
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		block title
+			title Проведение практики БГУИР
+		include includes/_head.pug
+	body
+		script(type="text/javascript").
+		include includes/_svg-template
+		//BEGIN out
+		.out
+			.page__outer
+				.page__wrapper
+					block config
+					header.page__header--wrap
+						.page__header.cd-auto-hide-header
+							include includes/_header.pug			
+					main.page__content
+						block content
+					footer.page__footer
+						include includes/_footer.pug
+		.modals
+			include includes/_modals.pug
+		//END out
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
+		script(src="js/lib.min.js")
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.77/jquery.form-validator.min.js")
+		script(src="http://code.jquery.com/ui/1.10.3/jquery-ui.js")
+		script(src="js/common.min.js")
