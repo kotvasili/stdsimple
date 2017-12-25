@@ -45,7 +45,7 @@ block content
 								.step-content
 									.row
 										.input-field.col.s12
-											input#PersonCity(name='PersonCity', type='text', data-validation="length custom",data-validation-regexp="^[-А-ЯЁа-яё ]+$", data-validation-length='min2',data-validation-error-msg='Обязательное поле, только кирилица',placeholder='Минск')
+											input#PersonCity(name='PersonCity', type='text', data-validation="length custom",data-validation-regexp="^[-А-ЯЁа-яё ,.]+$", data-validation-length='min2',data-validation-error-msg='Обязательное поле, только кирилица',placeholder='Минск')
 											label(for='PersonCity') Город
 									.step-actions
 										button(type='button').waves-effect.waves-dark.btn.next-step Далее
@@ -105,7 +105,7 @@ block content
 								.step-content
 									.row
 										.col.s12
-											h5 Отпрвить данные
+											h5 Отправить данные
 									.step-actions
 										button(type='button').waves-effect.waves-dark.btn-flat.previous-step Назад
 										button.btn.waves-effect.waves-dark.btn(type='submit') Отправить

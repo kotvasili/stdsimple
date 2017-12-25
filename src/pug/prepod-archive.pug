@@ -1,6 +1,6 @@
 extends _layout
 block title
-	title Страница преподавателя
+	title Архив преподавателя
 block config
 	- var main = true
 block content
@@ -13,9 +13,36 @@ block content
 					.profile-card-text.col.s8
 						p.bold Шведова О.А
 			.col.s6
-				a(href="#", data-position="bottom", data-tooltip="Архив групп с прошедших практик").btn.tooltipped Архив
+				a(href="#", data-position="bottom", data-tooltip="Просмотр текущих практик").btn.tooltipped Активные практики
 		.groups-wrapper
 			.groups-wrapper-nav
+				form(action="/").row
+					.input-field.col.m4
+						select
+							option(value='Все') Все
+							option(value='2014') 2014
+							option(value='2015') 2015
+							option(value='2016') 2016
+							option(value='2017') 2017
+						label Год поступления
+					.input-field.col.m4
+						select
+							option(value='Все') Все
+							option(value='ИТУТС') ИТУТС
+							option(value='ПОИТ') ПОИТ
+							option(value='ВГМА') ВГМА
+							option(value='ВААК') ВААК
+							option(value='Все') Все
+							option(value='ИТУТС') ИТУТС
+							option(value='ПОИТ') ПОИТ
+							option(value='ВГМА') ВГМА
+							option(value='ВААК') ВААК
+							option(value='Все') Все
+							option(value='ИТУТС') ИТУТС
+							option(value='ПОИТ') ПОИТ
+							option(value='ВГМА') ВГМА
+							option(value='ВААК') ВААК
+						label Специальность
 			// .loading вешаем во время аякса
 			.groups-wrapper-content
 				//block for loading
@@ -780,27 +807,6 @@ block content
 																			label(for='238result') Отметка за практику
 																		.input-field.s12
 																			button(type='submit').btn.waves-effect Сохранить
-							.report-wrapper
-								//- a(href="#",data-position="top", data-tooltip="Формирует списки студентов для сбора подписей на собрании").btn.waves-effect.tooltipped Список студентов
-								//- a(href="#",data-position="top", data-tooltip="Формирует таблицу для докладной записки").btn.waves-effect.tooltipped Отчет о начале практики
-								//- a(href="#",data-position="top", data-tooltip="Формирует таблицу для итогового отчета").btn.waves-effect.tooltipped Отчет о прохождении практики
-								//- a(href="#",data-position="top", data-tooltip="Формирует таблицу c отметакими студентов за практику").btn.waves-effect.tooltipped Отчет о защите отчетов
-								.fixed-action-btn.toolbar(data-position="top", data-tooltip="Отчеты по практике")
-									a.btn-floating.btn-large.teal
-										i.large.material-icons mode_edit
-									ul
-										li.waves-effect.waves-light
-											a(href='#!')
-												i.material-icons insert_chart
-										li.waves-effect.waves-light
-											a(href='#!')
-												i.material-icons format_quote
-										li.waves-effect.waves-light
-											a(href='#!')
-												i.material-icons publish
-										li.waves-effect.waves-light
-											a(href='#!')
-												i.material-icons attach_file
 					//- li.spec-wrapper
 						.collapsible-header.waves-effect.waves-orange
 							h5 Группы специальности: ИТУТС

@@ -88,6 +88,17 @@ nav
 		+r(992)
 			position: static
 			transform: none
+		+r(640)
+			font-size: 23px
+h1
+	+r(640)
+		font-size: 30px
+h2
+	+r(640)
+		font-size: 26px
+h3 
+	+r(640)
+		font-size: 23px
 .modal
 	width: 100% !important
 	max-width: 600px
@@ -99,6 +110,10 @@ nav
 		margin-bottom: 0
 .container
 	margin-top: 30px
+	width: 100% !important
+	max-width: 1600px !important
+	padding-left: 20px !important
+	padding-right: 20px !important
 .content-text
 	p 
 		display: block
@@ -113,6 +128,8 @@ nav
 	.btn 
 		display: inline-block
 		margin-right: 20px
+		margin-top: 5px
+		margin-bottom: 5px
 
 .profile-card
 	width: 120px !important
@@ -120,6 +137,9 @@ nav
 	padding: 10px
 	text-align: center
 	white-space: nowrap
+	&-wrapper 
+		+r(400)
+			margin: 0 !important
 	i 
 		margin-top: 10px
 
@@ -159,13 +179,13 @@ p
 		&-container
 			&.success
 				.profile-dogovor-status-container-text
-					margin-top: 5px
+					// margin-top: 5px
 				.profile-dogovor-status-container-icon,.profile-dogovor-status-container-text
 					p,i 
 						color: #00c853 
 			&.wait
 				.profile-dogovor-status-container-text
-					margin-top: 5px
+					// margin-top: 5px
 				.profile-dogovor-status-container-icon,.profile-dogovor-status-container-text
 					p,i 
 						color: #ffd600 
@@ -185,6 +205,9 @@ p
 	&>.row
 		max-width: 700px
 		width: 100%
+		margin: 0 auto !important
+		&>.col
+			padding: 0 !important
 	.student-form-title
 		max-width: 900px
 		text-align: center
@@ -213,8 +236,178 @@ ul.stepper .step.active:before, ul.stepper .step.done:before
 			.btn 
 				margin-right: 0
 .main-container
+	&>.row:first-child
+		margin: 0 !important
 	+r(400)
 		&>.row 
 			&>.s6:last-child
 				width: 100%
 				padding-left: 0
+.pagination
+	+nosel
+	li 
+		&.active,&.disabled
+			pointer-events: none
+		&.active
+			background-color: #26a69a!important
+.groups
+	&-wrapper
+		margin-top: 30px
+		&-footer
+			padding-top: 20px
+			padding-bottom: 20px
+			text-align: center
+		&-content 
+			position: relative
+			&>.collapsible
+
+			.spec-wrapper
+				&>.collapsible-header 
+					&.active
+						background-color: #FFC107 !important
+						color: white
+				&>.collapsible-body
+					padding: 0 !important
+					&>.collapsible
+						box-shadow: none !important
+						border-top: none
+
+	&-item 
+		.collapsible-header
+			p 
+				margin-top: 5px
+				margin-bottom: 5px
+			a 
+				display: block
+		.collapsible-body
+			padding-left: 15px
+			padding-right: 10px
+			&>table 
+				&>thead,&>tbody
+					+r(992)
+						padding-top: 50px
+					&>tr
+						&>td,&>th
+							&:first-child
+								font-weight: 500
+								span
+									font-weight: 400
+								+rm(992)
+									max-width: 150px	
+									width: 150px	 
+							&:nth-child(2)
+								+rm(992)
+									max-width: 200px	
+									width: 200px
+							&:nth-last-child(2)
+								+rm(992)
+									max-width: 270px	
+									width: 270px
+							&:last-child
+								position: relative
+								+rm(992)
+									max-width: 260px	
+									width: 260px
+				&>thead
+					+r(640)
+						max-width: 115px
+						th 
+							font-size: 14px
+
+				&>tbody
+					&>tr
+						&>td 
+							&> a.btn
+								padding: 0 15px
+								+r(640)
+									font-size: 13px
+									padding: 0 15px
+
+							&:first-child
+								span 
+									+rm(992)
+										display: block
+										margin-top: 5px
+									+r(992)
+										display: inline-block
+										padding-left: 10px
+							&>.dropdown-content
+								min-width: 240px
+								padding: 10px
+							.dropdown-content .input-field.col  label
+								width: auto			
+							.dropdown-content-inner
+								display: inline-block
+								padding: 15px
+								width: 100%
+								form 
+									width: 100%
+								.row
+									margin-bottom: 0
+									// padding: 20px
+				
+		&-contact
+			display: flex
+			flex-flow: row wrap
+			&-block 
+				padding-left: 5px
+				padding-right: 5px
+			a 
+				display: block
+				margin-top: 5px
+				margin-bottom: 5px
+				color: #26a69a
+				
+		&-name 
+			b 
+				display: block
+				
+.picker__footer
+	button
+		+r(600)
+			padding: 0 8px
+			font-size: 14px
+.picker__day
+	+rm(601)
+		padding: 14px 0 !important
+
+.block-placeholder
+	+coverdiv
+	+vertical
+	z-index: 10
+	background-color: rgba(255,255,255,.8)
+	transition: opacity .25s, visibility .25s
+	opacity: 0
+	visibility: hidden
+	.preloader-wrapper
+		display: inline-block
+		vertical-align: middle
+		z-index: 1
+					
+			
+.loading
+	*
+		pointer-events: none 
+	.block-placeholder
+		opacity: 1
+		visibility: visible
+// .picker__day
+// 	+rm(601)
+// 		padding: 14px 0 !important
+.report-wrapper
+	padding-bottom: 30px
+	padding-top: 30px
+	position: relative
+	.fixed-action-btn.toolbar
+		// &.active
+		// 	position: fixed
+			
+		position: absolute
+		+r(992)
+			display: none
+			
+		
+	// .btn 
+	// 	// &:not(:first-child)
+	// 	margin-left: 10px
+	// 	margin-top: 15px
