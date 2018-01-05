@@ -115,6 +115,7 @@ h3
 	padding-left: 20px !important
 	padding-right: 20px !important
 .content-text
+	max-width: 800px	
 	p 
 		display: block
 		
@@ -406,8 +407,20 @@ ul.stepper .step.active:before, ul.stepper .step.done:before
 		+r(992)
 			display: none
 			
-		
-	// .btn 
-	// 	// &:not(:first-child)
-	// 	margin-left: 10px
-	// 	margin-top: 15px
+.side
+	&-container
+		margin-top: 30px
+		margin-bottom: 30px
+		.btn 
+				width: 100%	
+	&-card
+		padding: 20px
+		margin: 25px 0
+		font-weight: 600	
+		p 
+			margin-top: 0
+		h6 
+				margin-top: 0	
+				color: gray
+				font-weight: 400	
+				font-size: 13px	

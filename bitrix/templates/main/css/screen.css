@@ -7325,21 +7325,21 @@ nav {
   padding-left: 1.25rem !important;
   padding-right: 1.25rem !important; }
 
-.content-text p {
-  display: block; }
-
-.content-text ul {
-  display: block; }
-  .content-text ul li {
-    padding-bottom: 5px;
-    margin-left: 1.25rem;
-    list-style-type: disc; }
-
-.content-text .btn {
-  display: inline-block;
-  margin-right: 1.25rem;
-  margin-top: 5px;
-  margin-bottom: 5px; }
+.content-text {
+  max-width: 50rem; }
+  .content-text p {
+    display: block; }
+  .content-text ul {
+    display: block; }
+    .content-text ul li {
+      padding-bottom: 5px;
+      margin-left: 1.25rem;
+      list-style-type: disc; }
+  .content-text .btn {
+    display: inline-block;
+    margin-right: 1.25rem;
+    margin-top: 5px;
+    margin-bottom: 5px; }
 
 .profile-card {
   width: 7.5rem !important;
@@ -7538,6 +7538,24 @@ ul.stepper .step.active:before, ul.stepper .step.done:before {
   position: relative; }
   .report-wrapper .fixed-action-btn.toolbar {
     position: absolute; }
+
+.side-container {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem; }
+  .side-container .btn {
+    width: 100%; }
+
+.side-card {
+  padding: 1.25rem;
+  margin: 1.5625rem 0;
+  font-weight: 600; }
+  .side-card p {
+    margin-top: 0; }
+  .side-card h6 {
+    margin-top: 0;
+    color: gray;
+    font-weight: 400;
+    font-size: 0.8125rem; }
   @media only screen and (min-width: 601px) and (max-width: 992px) {
   #toast-container {
     left: 5%;

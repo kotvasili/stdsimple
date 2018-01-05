@@ -52,14 +52,85 @@ block content
 				ul.collapsible.tooltipped(data-collapsible='collapsible', data-position="top", data-tooltip="Нажмите, чтобы раскрыть список")
 					li.spec-wrapper
 						.collapsible-header.waves-effect.waves-orange
-							h5 Группы специальности: ПОИТ
+							h5 Группы специальности: ИТУТС
 						.collapsible-body
 							ul.collapsible(data-collapsible='expandable')
 								// group component
 								li.groups-item
 									.collapsible-header.waves-effect.waves-orange
 										.groups-item-name 
-											h5 Группа 482472
+											h5 Группа 482471
+									.collapsible-body
+										.groups-item-contact
+											.groups-item-contact-block
+												.groups-item-contact-name 
+													b Староста
+												.groups-item-contact-content 
+													p Солодарь В.А.
+													p 
+														a(href="mailto:kot_vasili@mail.ru") kot_vasili@mail.ru
+														a(href="tel:+375259469724") +375259469724
+											.groups-item-contact-block
+												.groups-item-contact-name 
+													b E-mail группы
+												.groups-item-contact-content
+													p 
+														a(href="mailto:kot_vasili@mail.ru") kot_vasili@mail.ru
+										table.highlight.responsive-table
+											thead
+												tr
+													th ФИО и № зач
+													th Город
+													th Телефон
+													th E-mail
+													th Предприятие
+													th ФИО руководителя
+													th Должность руководителя
+													th Данные договора
+											tbody
+												// student  component
+												tr(data-studid='233')
+													td Кузнецова Е.В.
+														span 465782-20
+													td Минск
+													td 
+														a(href="tel:+375259469724") +375259469724
+													td 
+														a(href="mailto:nagibator99@mail.com") nagitor99@mail.com
+													td ООО Белаз
+													td Прокопоненко В.А.
+													td Ведущий технолог
+													td 
+														// уникальный айди в data-activates и контейнера внизу
+														a(href='#!',data-activates='233').waves-effect.btn.dropdown-button Редактировать данные
+														#233.dropdown-content
+															.dropdown-content-inner
+																form(action="/",onclick="event.stopPropagation()" ontouchstart="event.stopPropagation()")
+																	.row
+																		.input-field.s12
+																			select.icons
+																				option(value='1',selected='',data-icon="img/docstatus/dont.svg").left Не получен
+																				option(value='2',data-icon="img/docstatus/wait.svg").left На подписании
+																				option(value='3',data-icon="img/docstatus/success.svg").left Подписан
+																			label Статус договора
+																		.input-field.s12
+																			input#223name(type='text')
+																			label(for='223name') № договора
+																		.input-field.s12
+																			input#223date.datepicker(type='text')
+																			label(for='223date') Дата договора
+																		.input-field.s12
+																			input#223result(type='number')
+																			label(for='223result') Отметка за практику
+																		.input-field.s12
+																			button(type='submit').btn.waves-effect Сохранить
+												// end student  component
+								// end group component
+								// group component
+								li.groups-item
+									.collapsible-header.waves-effect.waves-orange
+										.groups-item-name 
+											h5 Группа 482473
 									.collapsible-body
 										.groups-item-contact
 											.groups-item-contact-block
@@ -160,146 +231,7 @@ block content
 																			label(for='224result') Отметка за практику
 																		.input-field.s12
 																			button(type='submit').btn.waves-effect Сохранить
-												tr(data-studid='235')
-													td Зуй Александр Михайлович
-														span 465782-21
-													td Деревня Муселиекр, Минский район
-													td 
-														a(href="tel:+375259469724") +375259469724
-													td 
-														a(href="mailto:nagibator99@mail.com") nagibator99@mail.com
-													td ООО Белаз-индастриалз
-													td Прокопоненко В.А.
-													td Главный наладчик наладочного оборудования отдела уборки прилегающей территории
-													td 
-														// уникальный айди в data-activates и контейнера внизу
-														a(href='#!',data-activates='235').waves-effect.btn.dropdown-button Редактировать данные
-														#235.dropdown-content
-															.dropdown-content-inner
-																form(action="/",onclick="event.stopPropagation()" ontouchstart="event.stopPropagation()")
-																	.row
-																		.input-field.s12
-																			select.icons
-																				option(value='1',selected='',data-icon="img/docstatus/dont.svg").left Не получен
-																				option(value='2',data-icon="img/docstatus/wait.svg").left На подписании
-																				option(value='3',data-icon="img/docstatus/success.svg").left Подписан
-																			label Статус договора
-																		.input-field.s12
-																			input#225name(type='text')
-																			label(for='225name') № договора
-																		.input-field.s12
-																			input#225date.datepicker(type='text')
-																			label(for='225date') Дата договора
-																		.input-field.s12
-																			input#225result(type='number')
-																			label(for='225result') Отметка за практику
-																		.input-field.s12
-																			button(type='submit').btn.waves-effect Сохранить
-												tr(data-studid='236')
-													td Зуй Александр Михайлович
-														span 465782-21
-													td Деревня Муселиекр, Минский район
-													td 
-														a(href="tel:+375259469724") +375259469724
-													td 
-														a(href="mailto:nagibator99@mail.com") nagibator99@mail.com
-													td ООО Белаз-индастриалз
-													td Прокопоненко В.А.
-													td Главный наладчик наладочного оборудования отдела уборки прилегающей территории
-													td 
-														// уникальный айди в data-activates и контейнера внизу
-														a(href='#!',data-activates='236').waves-effect.btn.dropdown-button Редактировать данные
-														#236.dropdown-content
-															.dropdown-content-inner
-																form(action="/",onclick="event.stopPropagation()" ontouchstart="event.stopPropagation()")
-																	.row
-																		.input-field.s12
-																			select.icons
-																				option(value='1',selected='',data-icon="img/docstatus/dont.svg").left Не получен
-																				option(value='2',data-icon="img/docstatus/wait.svg").left На подписании
-																				option(value='3',data-icon="img/docstatus/success.svg").left Подписан
-																			label Статус договора
-																		.input-field.s12
-																			input#226name(type='text')
-																			label(for='226name') № договора
-																		.input-field.s12
-																			input#226date.datepicker(type='text')
-																			label(for='226date') Дата договора
-																		.input-field.s12
-																			input#226result(type='number')
-																			label(for='226result') Отметка за практику
-																		.input-field.s12
-																			button(type='submit').btn.waves-effect Сохранить
-												tr(data-studid='237')
-													td Зуй Александр Михайлович
-														span 465782-21
-													td Деревня Муселиекр, Минский район
-													td 
-														a(href="tel:+375259469724") +375259469724
-													td 
-														a(href="mailto:nagibator99@mail.com") nagibator99@mail.com
-													td ООО Белаз-индастриалз
-													td Прокопоненко В.А.
-													td Главный наладчик наладочного оборудования отдела уборки прилегающей территории
-													td 
-														// уникальный айди в data-activates и контейнера внизу
-														a(href='#!',data-activates='237').waves-effect.btn.dropdown-button Редактировать данные
-														#237.dropdown-content
-															.dropdown-content-inner
-																form(action="/",onclick="event.stopPropagation()" ontouchstart="event.stopPropagation()")
-																	.row
-																		.input-field.s12
-																			select.icons
-																				option(value='1',selected='',data-icon="img/docstatus/dont.svg").left Не получен
-																				option(value='2',data-icon="img/docstatus/wait.svg").left На подписании
-																				option(value='3',data-icon="img/docstatus/success.svg").left Подписан
-																			label Статус договора
-																		.input-field.s12
-																			input#227name(type='text')
-																			label(for='227name') № договора
-																		.input-field.s12
-																			input#227date.datepicker(type='text')
-																			label(for='227date') Дата договора
-																		.input-field.s12
-																			input#227result(type='number')
-																			label(for='227result') Отметка за практику
-																		.input-field.s12
-																			button(type='submit').btn.waves-effect Сохранить
-												tr(data-studid='238')
-													td Зуй Александр Михайлович
-														span 465782-21
-													td -
-													td -
-													td -
-													td -
-													td -
-													td -
-													td 
-														// уникальный айди в data-activates и контейнера внизу
-														a(href='#!',data-activates='238').waves-effect.btn.dropdown-button Редактировать данные
-														#238.dropdown-content
-															.dropdown-content-inner
-																form(action="/",onclick="event.stopPropagation()" ontouchstart="event.stopPropagation()")
-																	.row
-																		.input-field.s12
-																			select.icons
-																				option(value='1',selected='',data-icon="img/docstatus/dont.svg").left Не получен
-																				option(value='2',data-icon="img/docstatus/wait.svg").left На подписании
-																				option(value='3',data-icon="img/docstatus/success.svg").left Подписан
-																			label Статус договора
-																		.input-field.s12
-																			input#238name(type='text')
-																			label(for='238name') № договора
-																		.input-field.s12
-																			input#238date.datepicker(type='text')
-																			label(for='238date') Дата договора
-																		.input-field.s12
-																			input#238result(type='number')
-																			label(for='238result') Отметка за практику
-																		.input-field.s12
-																			button(type='submit').btn.waves-effect Сохранить
 								// end group component
-
 								//- li.groups-item
 									.collapsible-header.waves-effect.waves-orange
 										.groups-item-name 
